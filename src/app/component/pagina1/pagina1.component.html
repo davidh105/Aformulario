@@ -1,0 +1,1002 @@
+<a class="mov aa" (click)="navegar()"> Inicio </a>
+
+<body id="html-data">
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+
+
+    <!--<svg>
+        <image [attr.src]="'/imagenes/home-alt-2-regular-24.png'" alt=""></image>
+    </svg>-->
+
+
+
+    <div class="abuelo" id="D0">
+
+
+        <h5><strong>FORMULARIO SAGRILAFT <br>
+        PERSONA JURÍDICA NACIONAL </strong></h5>
+
+    </div>
+
+    <!-- 1 -->
+
+    <div class="padre" id="D1" >
+
+
+        <div class="colum">
+            <label for="respuesta">TIPO DE CONTRAPARTE :</label>
+                    <select id="respuesta" name="respuesta" >
+                        <option value="Proveedor">Proveedor</option>
+                        <option value="Contratista">Contratista</option>
+                        <option value="Cliente">Cliente</option>
+                        <option value="Otra">Otra</option>
+                    </select>
+        </div>
+
+        <h4> <strong>Informacion basica:</strong> </h4>
+
+        <div class="contenedor" >
+
+            <div class="col" >
+                <form [formGroup]="form!"  class="formm" >
+                    <label for="D1_in1"> Razón Social</label>
+                    <br>
+                    <input type="text" formControlName="D1_in1" >
+                    <div *ngIf="form.get('D1_in1')!.errors && form.get('D1_in1')!.touched">
+                        <p *ngIf="form.get('D1_in1')!.hasError('required')">
+                        este campo es requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in2">Tipo de Empresa :</label>
+                    <br>
+                    <select id="D1_in2" name="D1_in2"  formControlName="D1_in2">
+                        <option value="Publica">Publica</option>
+                        <option value="Privada">Privada</option>
+                        <option value="Mixta">Mixta</option>
+                        <option value="Otra">Otra</option>
+                    </select>
+                        <div *ngIf="form.get('D1_in2')!.errors && form.get('D1_in2')!.touched">
+                            <p *ngIf="form.get('D1_in2')!.hasError('required')">
+                                seleccione una opcion 
+                            </p>
+                        </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in3"> Ciudad</label>
+                    <br>
+                    <input type="text" formControlName="D1_in3">
+                    <div *ngIf="form.get('D1_in3')!.errors && form.get('D1_in3')!.touched">
+                        <p *ngIf="form.get('D1_in3')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in4"> Nombre Representante legal</label>
+                    <br>
+                    <input type="text" formControlName="D1_in4">
+                    <div *ngIf="form.get('D1_in4')!.errors && form.get('D1_in4')!.touched">
+                        <p *ngIf="form.get('D1_in4')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in5"> Fecha de Expedición</label>
+                    <br>
+                    <input type="text" formControlName="D1_in5">
+                    <div *ngIf="form.get('D1_in5')!.errors && form.get('D1_in5')!.touched">
+                        <p *ngIf="form.get('D1_in5')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in6"> Lugar de Nacimiento</label>
+                    <br>
+                    <input type="text" formControlName="D1_in6">
+                    <div *ngIf="form.get('D1_in6')!.errors && form.get('D1_in6')!.touched">
+                        <p *ngIf="form.get('D1_in6')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in7"> Es PEP (¿Persona políticamente 
+                        expuesta?)</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in7" >
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in7')!.errors && form.get('D1_in7')!.touched">
+                        <p *ngIf="form.get('D1_in7')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in8"> ¿Por su cargo o actividad 
+                        maneja recursos públicos?</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in8">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in8')!.errors && form.get('D1_in8')!.touched">
+                        <p *ngIf="form.get('D1_in8')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in9"> ¿Por su actividad u oficio, goza 
+                        usted de reconocimiento 
+                        público general?</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in9">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in9')!.errors && form.get('D1_in9')!.touched">
+                        <p *ngIf="form.get('D1_in9')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in10"> Indique el nombre y cargo que 
+                        ostenta</label>
+                    <br>
+                    <input type="text" formControlName="D1_in10">
+                    <div *ngIf="form.get('D1_in10')!.errors && form.get('D1_in10')!.touched">
+                        <p *ngIf="form.get('D1_in10')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in11"> ¿Es usted Representante Legal 
+                        de una Organización 
+                        Internacional?</label>
+                    <br>
+                    <input type="text" formControlName="D1_in11">
+                    <div *ngIf="form.get('D1_in11')!.errors && form.get('D1_in11')!.touched">
+                        <p *ngIf="form.get('D1_in11')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <div  class="col" >
+                <form class="formm" action=""  [formGroup]="form!">
+                    <label for="D1_in12">NIT</label>
+                    <br>
+                    <input type="text" formControlName="D1_in12">
+                    <div *ngIf="form.get('D1_in12')!.errors && form.get('D1_in12')!.touched">
+                        <p *ngIf="form.get('D1_in12')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in13"> Descripción 
+                        Actividad 
+                        Económica</label>
+                    <br>
+                    <input type="text" formControlName="D1_in13">
+                    <div *ngIf="form.get('D1_in13')!.errors && form.get('D1_in13')!.touched">
+                        <p *ngIf="form.get('D1_in13')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in14"> Celular Corporativo</label>
+                    <br>
+                    <input type="text" formControlName="D1_in14">
+                    <div *ngIf="form.get('D1_in14')!.errors && form.get('D1_in14')!.touched">
+                        <p *ngIf="form.get('D1_in14')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in15"> Departamento</label>
+                    <br>
+                    <input type="text" formControlName="D1_in15">
+                    <div *ngIf="form.get('D1_in15')!.errors && form.get('D1_in15')!.touched">
+                        <p *ngIf="form.get('D1_in15')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in16"> Tipo de Documento</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in16">
+                        <option value="CC">CC</option>
+                        <option value="no">CE</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in16')!.errors && form.get('D1_in16')!.touched">
+                        <p *ngIf="form.get('D1_in16')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in17"> Lugar de Expedición</label>
+                    <br>
+                    <input type="text" formControlName="D1_in17">
+                    <div *ngIf="form.get('D1_in17')!.errors && form.get('D1_in17')!.touched">
+                        <p *ngIf="form.get('D1_in17')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in18"> Nacionalidad 1</label>
+                    <br>
+                    <input type="text" formControlName="D1_in18">
+                    <div *ngIf="form.get('D1_in18')!.errors && form.get('D1_in18')!.touched">
+                        <p *ngIf="form.get('D1_in18')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in19"> Indique su cargo</label>
+                    <br>
+                    <input type="text" formControlName="D1_in19">
+                    <div *ngIf="form.get('D1_in19')!.errors && form.get('D1_in19')!.touched">
+                        <p *ngIf="form.get('D1_in19')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in20"> ¿Ejerce algún grado 
+                        de poder público? </label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in20" >
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in20')!.errors && form.get('D1_in20')!.touched">
+                        <p *ngIf="form.get('D1_in20')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in21"> Indique las razones</label>
+                    <br>
+                    <input type="text" formControlName="D1_in21">
+                    <div *ngIf="form.get('D1_in21')!.errors && form.get('D1_in21')!.touched">
+                        <p *ngIf="form.get('D1_in21')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in22"> ¿Está usted sujeto a 
+                        Obligaciones 
+                        Tributarias en otro 
+                        país o Países?</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in22">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in22')!.errors && form.get('D1_in22')!.touched">
+                        <p *ngIf="form.get('D1_in22')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <div  class="col" >
+                <form class="formm" action="" [formGroup]="form!">
+                    <label for="D1_in23"> CIIU (Código) </label>
+                    <br>
+                    <input type="text" formControlName="D1_in23">
+                    <div *ngIf="form.get('D1_in23')!.errors && form.get('D1_in23')!.touched">
+                        <p *ngIf="form.get('D1_in23')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in24"> Dirección Corporativa</label>
+                    <br>
+                    <input type="text" formControlName="D1_in24">
+                    <div *ngIf="form.get('D1_in24')!.errors && form.get('D1_in24')!.touched">
+                        <p *ngIf="form.get('D1_in24')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in25"> Correo Corporativo</label>
+                    <br>
+                    <input type="text" formControlName="D1_in25">
+                    <div *ngIf="form.get('D1_in25')!.errors && form.get('D1_in25')!.touched">
+                        <p *ngIf="form.get('D1_in25')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div> 
+                    <br>
+                    <hr>
+                    <label for="D1_in26"> ¿Cotiza en bolsa? ¿Cual?</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in26">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in26')!.errors && form.get('D1_in26')!.touched">
+                        <p *ngIf="form.get('D1_in26')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in27"> Número de documento</label>
+                    <br>
+                    <input type="text" formControlName="D1_in27">
+                    <div *ngIf="form.get('D1_in27')!.errors && form.get('D1_in27')!.touched">
+                        <p *ngIf="form.get('D1_in27')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div> 
+                    <br>
+                    <hr>
+                    <label for="D1_in28"> Fecha de Nacimiento</label>
+                    <br>
+                    <input type="text" formControlName="D1_in28">
+                    <div *ngIf="form.get('D1_in28')!.errors && form.get('D1_in28')!.touched">
+                        <p *ngIf="form.get('D1_in28')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div> 
+                    <br>
+                    <hr>
+                    <label for="D1_in29"> Nacionalidad 2</label>
+                    <br>
+                    <input type="text" formControlName="D1_in29">
+                    <div *ngIf="form.get('D1_in29')!.errors && form.get('D1_in29')!.touched">
+                        <p *ngIf="form.get('D1_in29')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div> 
+                    <br>
+                    <hr>
+                    <label for="D1_in30"> Fecha inicio:
+                        Fecha fin:</label>
+                    <br>
+                    <input type="text" formControlName="D1_in30">
+                    <div *ngIf="form.get('D1_in30')!.errors && form.get('D1_in30')!.touched">
+                        <p *ngIf="form.get('D1_in30')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in31"> ¿Es usted servidor 
+                        público?</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in31">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in31')!.errors && form.get('D1_in31')!.touched">
+                        <p *ngIf="form.get('D1_in31')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in32"> ¿Tiene algún vínculo con 
+                        una Persona considerada 
+                        Públicamente Expuesta?</label>
+                    <br>
+                    <select id="respuesta" name="respuesta" formControlName="D1_in32">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                    </select>
+                    <div *ngIf="form.get('D1_in32')!.errors && form.get('D1_in32')!.touched">
+                        <p *ngIf="form.get('D1_in32')!.hasError('required')">
+                            Seleccione una opcion
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <label for="D1_in33"> ¿Cuales?</label>
+                    <br>
+                    <input type="text" formControlName="D1_in33">
+                    <div *ngIf="form.get('D1_in33')!.errors && form.get('D1_in33')!.touched">
+                        <p *ngIf="form.get('D1_in33')!.hasError('required')">
+                            Campo requerido
+                        </p>
+                    </div>
+                    <br>
+                </form>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    <!-- 2 -->
+    <div class="padre" id="D2">
+        <p> <strong> 02. Accionistas con participación accionaria o capital social directa o indirecta mayor o 
+            igual al 5% </strong> (En caso de que alguno de los accionistas se encuentre catalogado como PEP por favor completar la 
+            información requerida en el formato PEP)</p>
+            <br>
+            <br>    
+        <div>
+        <form class="tab" [formGroup]="form">
+            <table class="tabla">
+                <tr >
+                        <td class="barra_c"><label for="Nombre Completo">Nombre Completo:</label></td>
+                        <td class="barra_c"><label for="No. Identificación">No. Identificación:</label></td>
+                        <td class="barra_c"><label for="% Part">% Part:</label></td>
+                        <td class="barra_c"><label for="Teléfono">Teléfono:</label></td>
+                        <td class="barra_c"><label for="Correo electrónico">Correo electrónico:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in1"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in2"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in3"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in4"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in5"></td>
+                    </tr>  
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in6"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in7"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in8"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in9"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in10"></td>
+                    </tr>    
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in11"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in12"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in13"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in14"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in15"></td>
+                    </tr> 
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in16"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in17"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in18"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in19"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in20"></td>
+                    </tr> 
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in21"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in22"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in23"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in24"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in25"></td>
+                    </tr> 
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in26"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in27"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in28"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in29"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in30"></td>
+                    </tr>   
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in31"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in32"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in33"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in34"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in35"></td>
+                    </tr>  
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in36"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in37"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in38"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in39"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in40"></td>
+                    </tr>  
+                    <tr>
+                        <td><input type="text" id="Nombre Completo" formControlName="D2_in41"></td>
+                        <td><input type="number" id="No. Identificación" formControlName="D2_in42"></td>
+                        <td><input type="text" id="% Part" formControlName="D2_in43"></td>
+                        <td><input type="number" id="Teléfono" formControlName="D2_in44"></td>
+                        <td><input type="email" id="Correo electrónico" formControlName="D2_in45"></td>
+                    </tr>               
+                    
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="padre" id="D3">
+
+        <h5> <strong>03. Información Financiera (En pesos colombianos) a 31 de diciembre del año inmediatamente 
+            anterior</strong> </h5>
+            <br>
+        <form class="tab" [formGroup]="form">
+            <table class="tabla">
+                <tr>
+                    <td class="barra_c"><label for="nombre">Ingresos Anuales</label></td>
+                    <td><input type="text" id="nombre" name="nombre" formControlName="D3_in1"></td>
+                    <td class="barra_c"><label for="nombre">Activos</label></td>
+                    <td><input type="text" id="nombre" name="nombre" formControlName="D3_in2"></td>            </tr>
+                <tr>
+                    <td class="barra_c"><label for="apellido">Egresos Anuales</label></td>
+                    <td><input type="text" id="nombre" name="nombre" formControlName="D3_in3"></td>
+                    <td class="barra_c"><label for="apellido">Pasivos</label></td>
+                    <td><input type="text" id="nombre" name="nombre" formControlName="D3_in4"></td>
+                    </tr>
+                <tr>
+                    <td class="barra_c"><label for="correo">Otros Ingresos Anuales</label></td>
+                    <td><input type="text" id="nombre" name="nombre" formControlName="D3_in5"></td>
+                    <td class="barra_c"><label for="correo">Patrimonio</label></td>
+                    <td><input type="text" id="nombre" name="nombre" formControlName="D3_in6"></td>
+                </tr>
+                <tr>
+                    <td class="barra_c"><label for="contrasena">Concepto Otros Ingresos</label></td>
+                    <td class="solo" colspan="3"> <input class="solo-i" id="correo" name="correo" formControlName="D3_in7"></td>
+                </tr>
+                
+            </table>
+        </form>
+
+    </div>
+
+    <!-- 4 -->
+    <div class="padre" id="D4">
+
+        <h5><strong>04. Informe de Impuestos</strong></h5>
+        <br>
+        <form class="form-1" [formGroup]="form">
+            <table class="">
+                <tr class="ta-1">
+                    <td class="ta-1"><label for="nombre">Declara Renta:</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in1">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                    <td class="invisible"></td>
+                    <td class="ta-1"><label for="nombre">Declara IVA</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in2">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                </tr >
+                <tr class="ta-1">
+                    <td class="ta-1"><label for="apellido">Declara ICA</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in3">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                    <td class="invisible"></td>                
+                    <td class="ta-1"><label for="nombre">Gran Contribuyente</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in4">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                </tr>
+                <tr class="ta-1">
+                    <td class="ta-1"><label for="correo">Régimen Simple</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in5">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                    <td class="invisible"></td>                
+                    <td class="ta-1"><label for="nombre">Actividad Económica</label></td>
+                    <td class="ta-1"><input type="text" id="nombre" name="nombre" formControlName="D4_in6"></td>
+                </tr>
+                <tr class="ta-1">
+                    <td class="ta-1"><label for="contrasena">Agente Retenedor</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in7">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                    <td class="invisible"></td>                
+                    <td class="ta-1"><label for="nombre">Agente Autoretenedor</label></td>
+                    <td class="ta-1"><select id="opciones" name="opciones" formControlName="D4_in8">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select></td>
+                </tr>
+                
+            </table>
+        </form>
+
+    </div>
+
+    <!-- 5 -->
+    <div class="padre" id="D5">
+
+        <h5><strong>05. Datos Bancarios</strong></h5>
+        <br>
+        <p>Autorizo a la empresa Forest First Colombia SAS a realizar el depósito correspondiente a 
+            los pagos por bienes y servicios prestados a las siguiente Cuenta:
+            </p>
+    
+            <div class="padre inv">
+                <form [formGroup]="form">
+                    <div class="tab div-5">
+                        <table class="tabla">
+                            <tr>
+                                <td class="barra_c"><label for="Banco">Banco</label></td>
+                                <td class="barra_c"><label for="Tipo de cuenta">Tipo de cuenta</label></td>
+                                <td class="barra_c"><label for="nombre">No de cuenta</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="Banco" name="Banco" formControlName="D5_in1"></td>
+                                <td><input type="text" id="Tipo de cuenta" name="Tipo de cuenta" formControlName="D5_in2"></td>
+                                <td><input type="text" id="No de cuenta" name="No de cuenta" formControlName="D5_in3"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <label for="correo" for="D5_in4">Correo de envío de comprobantes de pago:</label>
+                        <br>
+                        <input type="email" formControlName="D5_in4">
+                        <div *ngIf="form.get('D5_in4')!.errors && form.get('D5_in4')!.touched">
+                            <p *ngIf="form.get('D5_in4')!.hasError('required')">
+                            este campo es requerido
+                            </p>
+                        </div>
+                        <br>
+                        <br>
+                        <label for="correo" for="D5_in5">Nombre y teléfono de contacto para confirmar los datos en caso de que fuera necesario: </label>
+                        <br>
+                        <input type="email" formControlName="D5_in5">
+                        <div *ngIf="form.get('D5_in5')!.errors && form.get('D5_in5')!.touched">
+                            <p *ngIf="form.get('D5_in5')!.hasError('required')">
+                            este campo es requerido
+                            </p>
+                        </div>
+                        
+                    </div>
+            
+                </form>
+            </div>
+
+    </div>
+
+    <!-- 6 -->
+    <div class="padre" id="D6">
+    
+        <form action="" [formGroup]="form">
+            <label for="D6_in1"><h5><strong>06. Condiciones de Pago</strong></h5></label>
+            <select id="opciones" name="opciones" formControlName="D6_in1">
+                <option value="Contado">Contado</option>
+                <option value="Credito a 30 dias">Credito a 30 dias</option>
+                <option value="Credito a 60 dias">Credito a 60 dias</option>
+                <option value="Credito a 90 dias">Credito a 90 dias</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <br>
+            <br>
+            <div class="espacio">
+                <label for="D6_in2">Otro:</label>
+                <input class="line lin" type="text" formControlName="D6_in2"> 
+            </div>
+        </form>
+    </div>
+
+    <!-- 7 -->
+    <div class="padre" id="D7">
+
+        <h5><strong>07. Actividades en Operaciones Internacionales</strong></h5>
+        <br>
+    <div>
+            <form class="espacio" [formGroup]="form">
+                <label for="D7_in1">¿Realiza operaciones en moneda extranjera?</label>
+                    <select class="sel" id="opciones" name="opciones" formControlName="D7_in1">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                    <br>
+                    <label for="opciones">Seleccione el tipo de operación</label>
+                    <select class="sel" id="opciones" name="opciones" formControlName="D7_in2">
+                        <option value="Si">Contado</option>
+                        <option value="Credito a 30 dias">Credito a 30 dias</option>
+                        <option value="Credito a 60 dias">Credito a 60 dias</option>
+                        <option value="Credito a 90 dias">Credito a 90 dias</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <br>
+                    <div class="espacio">
+                        <label for="">Otro:</label>
+                        <input class="line lin" type="text" formControlName="D7_in3"> 
+                    </div>
+                    <label for="opciones">¿Posee productos financieros en el exterior?</label>
+                    <select class="sel" id="opciones" name="opciones" formControlName="D7_in4">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                    <br>
+                    <label for="opciones">¿Posee cuentas en moneda extranjera?</label>
+                    <select class="sel mas" id="opciones" name="opciones" formControlName="D7_in5">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+            </form>
+    </div>
+    <br>
+    <div class="c-6">
+        <form action="" [formGroup]="form">
+                <table class="tabla tabb">
+                    <tr class="tabb">
+                        <td class="tabb barra_c"><label for="Tipo de Producto">Tipo de Producto</label></td>
+                        <td class="tabb barra_c"><label for="Número del Producto">Número del Producto</label></td>
+                        <td class="tabb barra_c"><label for="Entidad">Entidad</label></td>
+                        <td class="tabb barra_c"><label for="Monto">Monto</label></td>
+                        <td class="tabb barra_c"><label for="País">País</label></td>
+                        <td class="tabb barra_c"><label for="Moneda">Moneda</label></td>
+                    </tr>
+                    <tr class="tabb">
+                        <td class="tabb"><input class="tabb-i" id="Tipo de Producto" formControlName="D7_in6"></td>
+                        <td class="tabb"><input class="tabb-i" id="Número del Producto" formControlName="D7_in7"></td>
+                        <td class="tabb"><input class="tabb-i" id="Entidad" formControlName="D7_in8"></td>
+                        <td class="tabb"><input class="tabb-i" id="Monto" formControlName="D7_in9"></td>
+                        <td class="tabb"><input class="tabb-i" id="País" formControlName="D7_in10"></td>
+                        <td class="tabb"><input class="tabb-i" id="Moneda" formControlName="D7_in11"></td>
+                    </tr>
+                    <tr class="tabb">
+                        <td class="tabb"><input class="tabb-i" id="Tipo de Producto" formControlName="D7_in12"></td>
+                        <td class="tabb"><input class="tabb-i" id="Número del Producto" formControlName="D7_in13"></td>
+                        <td class="tabb"><input class="tabb-i" id="Entidad" formControlName="D7_in14"></td>
+                        <td class="tabb"><input class="tabb-i" id="Monto" formControlName="D7_in15"></td>
+                        <td class="tabb"><input class="tabb-i" id="País" formControlName="D7_in16"></td>
+                        <td class="tabb"><input class="tabb-i" id="Moneda" formControlName="D7_in17"></td>
+                    </tr>
+                    <tr class="tabb">
+                        <td class="tabb"><input class="tabb-i" id="Tipo de Producto" formControlName="D7_in18"></td>
+                        <td class="tabb"><input class="tabb-i" id="Número del Producto" formControlName="D7_in19"></td>
+                        <td class="tabb"><input class="tabb-i" id="Entidad" formControlName="D7_in20"></td>
+                        <td class="tabb"><input class="tabb-i" id="Monto" formControlName="D7_in21"></td>
+                        <td class="tabb"><input class="tabb-i" id="País" formControlName="D7_in22"></td>
+                        <td class="tabb"><input class="tabb-i" id="Moneda" formControlName="D7_in23"></td>
+                    </tr>
+                </table>
+        </form>
+    </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="padre" id="D8">
+
+        <h5><strong>08. Declaración Origen de Fondos</strong></h5>
+            <br>
+            Declaro expresamente que: <br>
+            1. Tanto mi actividad, profesión u oficio es lícita y la ejerzo dentro del marco legal y los recursos que poseo no provienen de actividades ilícitas 
+            de las contempladas en el Código Penal Colombiano. <br>
+            2. La información que he suministrado en la solicitud y en este documento es veraz y verificable y me comprometo a actualizarla anualmente. <br>
+            3. Los recursos que se deriven del desarrollo de este contrato no se destinarán a financiación del terrorismo, grupos o actividades terroristas. <br>
+            4. Los recursos que poseo provienen de las e las actividades descritas anteriormente. <br>
+            5. Los bienes y/o fondos relacionados o suministrados a FOREST FIRST COLOMBIA SAS en desarrollo de las operaciones comerciales tienen como ORIGEN la siguiente fuente:
+            <form action="" [formGroup]="form">
+                <label for="D8_in1"> fuente: </label> 
+                <input type="text" formControlName="D8_in1">
+                <br>
+                <br>
+                <label for="D8_in2">Y provienen del siguiente país: </label>
+                <input  type="text" formControlName="D8_in2">
+            </form>
+    </div>
+
+    <!-- 9 -->
+    <div class="padre" id="D9">
+
+        <h5><strong>09. Autorización para tratamiento de Información</strong></h5>
+        <br>
+        <p>
+        Por medio de la aceptación de este documento, el suscriptor autoriza de manera libre, expresa y voluntaria a Forest First Colombia 
+        S.A.S., para que, en los términos de la legislación vigente aplicable a la protección de datos personales, habeas data, ley 1581 de 
+        2012, el decreto 1377 de 2013, las demás normas que las modifiquen sustituyan o complementen, para las siguientes finalidades: <br>
+        1. Validación y verificación de antecedentes judiciales, validación de datos en los listados de la OFAC, la ONU, la procuraduría 
+        general de la nación, la policía nacional, o cualquier otra autoridad local, extranjera o internacional, así como en cualquier lista o 
+        base de datos que se consulte en el marco del cumplimiento del sistema de autocontrol y gestión integral del riesgo de lavado de 
+        activos, financiación del terrorismo y financiamiento de la proliferación de armas de destrucción masiva (Sagrilaft) <br>
+        2. Validar la información suministrada en cumplimiento de la normativa vigente sobre prevención del lavado de activos, financiación 
+        del terrorismo y el financiamiento de la proliferación de armas de destrucción masiva (Sagrilaft), la prevención del riesgo de soborno, 
+        fraude y corrupción <br>
+        3. Corroborar, validar y consultar la información suministrada en fuentes de información y centrales de riesgo, con el propósito de 
+        utilizarlas como un elemento de análisis de su relación con la compañía; así como realizar los reportes correspondientes en el 
+        desarrollo de esta. <br>
+        4. Realizar control y prevención del lavado de activos, financiación del terrorismo del fraude, el financiamiento de la proliferación 
+        de armas de destrucción masiva (Sagrilaft) y/o la prevención del riesgo de soborno, fraude y corrupción. <br>
+        5. Verificación y monitoreo de las transacciones realizadas <br>
+        6. Auditoría y verificación del historial de incidentes relacionados con el lavado de activos, financiación del terrorismo, el 
+        financiamiento de la proliferación de armas de destrucción masiva (Sagrilaft) y/o la prevención del riesgo de soborno, fraude y 
+        corrupción <br>
+        7. Cumplimiento de las obligaciones relacionadas con la prevención y control del lavado de activos, financiación del terrorismo, el 
+        financiamiento de la proliferación de armas de destrucción masiva (Sagrilaft) y/o la prevención del riesgo de soborno, fraude y 
+        corrupción. <br>
+        8. Para dar cumplimiento a requerimientos realizados por autoridades competentes la compañía podrá tratar y recolectar datos 
+        personales cuyo uso indebido puede generar discriminación, los cuales tienen el carácter de datos personales sensibles que se 
+        trataran con el propósito de alcanzar las finalidades mencionadas. por lo cual, el suscriptor manifiesta que las respuestas a las 
+        preguntas sobre datos personales sensibles y datos de menores de edad son facultativas y las suministrara el suscriptor de manera 
+        libre y voluntaria. El suscriptor en calidad de titular de los datos personales tiene derecho a conocer, acceder, actualizar y rectificar 
+        sus datos personales, solicitar prueba de la autorización otorgada, ser informado respecto de los usos que se les han dado a sus 
+        datos y/o solicitar su supresión, mediante correo electrónico a: sagrilaft@forestfirst.com
+        </p>
+    </div>
+
+    <!-- 10 -->
+    <div class="padre" id="D10">
+
+        <h5><strong>10. Declaración de prevención de riesgo contra el lavado de activos, financiación del terrorismo 
+        y financiamiento de la proliferación de armas de destrucción masiva</strong></h5>
+            <br>
+        <p>Mediante el diligenciamiento y firma de este formato declaro que no hago parte de ninguna lista relacionada con lavado de 
+            activos, financiación del terrorismo y financiamiento de la proliferación de armas de destrucción masiva; así mismo declaro que mis 
+            empleados, accionistas, miembros de la junta directiva o junta de socios, representantes legales y revisor fiscal (en caso de tenerlo), 
+            tampoco se encuentran reportados en ellas y así mismo genero el compromiso de actualizar la información cuando hubieren casos
+            y reportarla a su organización.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="padre" id="D11">
+
+        <h5><strong>11. Cláusula de Incumplimiento</strong></h5>
+        <br>
+        <p>
+        Forest First Colombia SAS podrá terminar de manera unilateral e inmediata la relación suscrita con la contraparte. cuando se 
+        presente lo siguiente:
+        </p>
+
+        <p>
+            1.Cuando la contraparte, sus accionistas, socios, representantes, administradores, o vinculados que tengan, posean o controlen, 
+            directa o directamente, por lo menos un 5% de participación, sean incluidos en listas vinculantes o cautelares de vigilancia 
+            obligatoria en Colombia <br>
+            2. Cuando exista en contra de la contraparte o de sus accionistas, asociados o socios, sus representantes legales y/o los miembros 
+            de su junta directiva, investigación, imputación o sentencia judicial en firme que los condene por la comisión de los delitos de 
+            soborno trasnacional, corrupción y LA/FT/FPADM o se encuentren vinculados a investigaciones o procesos penales, civiles o 
+            administrativos por dichos delitos, o exista información pública o de conocimiento general con respecto a tales personas, que 
+            puedan colocar a Forest First Colombia SAS. frente a un riesgo legal o reputacional <br>
+            3. Suministre información errónea, falsa o inexacta que se hubiera proporcionado en este documento. <br>
+            4. Por las que considere que objetivamente supongan un alto riesgo reputacional, operativo, de contagio o de cualquier otro tipo 
+            para Forest First Colombia SAS. <br>
+            5. Cuando la contraparte, sus representantes, socios, administradores, accionistas o contratistas trasgredan los principios y las normas 
+            contenidas en el manual de cumplimiento del PTEE y el manual de cumplimiento de Sagrilaft.        
+        </p>
+
+    </div>
+
+    <!-- 12 -->
+    <div class="padre" id="D12">
+
+        <h5><strong>12. Declaración de veracidad de la información</strong></h5>
+        <br>
+        <p>
+            Declaro que la información contenida en el formulario de conocimiento y vinculación de contrapartes es verdadera, completa y 
+            proporciona la información solicitada de modo confiable y actualizado, por lo cual autorizo a que sea validada por Forest First 
+            Colombia SAS.
+        </p>
+    </div>
+
+    <!-- 13 -->
+    <div class="padre" id="D13">
+
+        <h5><strong>13. Declaración de aceptación</strong></h5>
+        <br>
+        <p>
+            El presente documento se firma como aceptación de haber entendido y comprendido su contenido, que la información 
+            suministrada es cierta en todas sus partes, que voluntariamente otorgo autorización para consulta y reporte en sistemas de 
+            información para la prevención de riesgo de lavado de activos, financiación del terrorismo y financiamiento de la proliferación 
+            de armas de destrucción masiva, así como para el tratamiento de datos personales, y en general para verificar el contenido de 
+            toda la información suministrada. la solicitud de información consignada en este formulario obedece a las disposiciones legales 
+            vigentes en Colombia para la prevención del riesgo de lavado de activos, financiación del terrorismo y financiamiento de las 
+            armas de destrucción masiva - Sagrilaft y la prevención del riesgo de soborno, fraude y corrupción de la política de transparencia 
+            y ética empresarial - PTEE
+        </p>
+
+    </div>
+
+    <!-- 14 -->
+    <div class="padre" id="D14">
+
+        <h5><strong>14. Documentos Requeridos</strong></h5>
+        <br>
+        <ul>
+            <li>Archivo legible del documento de Identificación del Representante Legal</li>
+            <li>Cámara de Comercio no Mayor a 30 días</li>
+            <li>RUT vigente</li>
+            <li>Aportar declaración de renta, si no es declarante aportar certificado de ingresos del año inmediatamente anterior</li>
+            <li>Certificación bancaria expedida por la entidad donde posea su cuenta bancaria, en lo posible a nombre de Forest First Colombia 
+            SAS</li>
+            <li>Aportar informe de estados financieros de los 2 años inmediatamente anteriores.</li>
+            <li>Archivo Legible de los documentos de identificación de los accionistas y miembros de la Junta Directiva</li>
+    
+        </ul>
+    </div>
+
+    <!-- 15 -->
+    <div class="padre" id="D15">
+
+        <h5><strong>15. Firma</strong></h5>
+        <br>
+        <form action="" [formGroup]="form" >
+            <p>
+                Como constancia de haber leído y entendido lo anterior, declaro y acepto los términos 
+                y condiciones del presente formulario, en constancia firmo a los días <input class="taa" formControlName="D15_in1">
+                del mes de <input id="D15_in2" name="D15_in2" class="taa" formControlName="D15_in2"> del año en la ciudad de <input id="D15_in3" name="D15_in3" class="taa" formControlName="D15_in3">.
+            </p>
+            <br>
+
+    
+            <label for="D15_in1">Nombre completo: </label>
+            <input class="line" id="D15_in1" name="D15_in1" type="text" formControlName="D15_in4">
+            <div *ngIf="form.get('D15_in4')!.errors && form.get('D15_in4')!.touched">
+                <p *ngIf="form.get('D15_in4')!.hasError('required')">
+                este campo es requerido
+                </p>
+            </div>
+            <br>
+            <br>
+            <label for="D15_in5">Correo electrónico: </label>
+            <input class="line"  type="text" formControlName="D15_in5">
+
+            <div *ngIf="form.get('D15_in5')!.errors && form.get('D15_in5')!.touched">
+                <p *ngIf="form.get('D15_in5')!.hasError('required')">
+                este campo es requerido
+                </p>
+            </div>
+            <br>
+            <br>
+            <div class="soloo">
+                <label for="D15_in6">Firma del Representante Legal: </label>
+                
+                
+                  
+                <b >
+                        <signature-pad getSignature="D15_in6"  class="signature-pad" #signature [options]="SignaturePadOptions"
+                    (drawStart)="drawStart($event)" (drawEnd)="drawComplete($event)" background-color="white">
+                    
+                    </signature-pad>
+                </b>
+                    
+                    
+                   
+                    <br>
+                    <br>
+                    <!--<input type="file" (change)="uploadImage($event)" >-->
+
+                <br>
+                
+            </div>
+        </form>
+    </div>    
+    <br>
+</body>
+
+<body class="">
+<div class="btn" *ngIf="IsDrwan">
+    <button (click)="clear()">Clear</button>
+    <button (click)="undo()">Undo</button>
+    <button (click)="redo()">Redo</button>
+    <button (click)="SavePNG()">Save as PG</button>
+</div>
+
+<div class="bot">
+    <div>
+    <button type="submit" class="boton hide" (click)="save($event)" (click)="Save()">guardar</button>
+
+    <button type="submit" class="boton hide" (click)="pdf()" id="pdf">guardar pdf</button>
+    </div>
+    <br>
+    <br>
+
+</div>
+</body>
